@@ -10,17 +10,22 @@ public class ALInsertionSort
     	boolean inserted=false;
 
 		//Add the first number to the array list
+		sorted.add(myNumbers[0]);
 
 		//Loop once for all of the remaining numbers in the unsorted list
-
+		for(int i = 1; i<myNumbers.length;i++)
+		{
 			//Check with each of the numbers in the sorted list
-
+			if(myNumbers[i]<sorted.get(loc))
+			{
 				//If this number is less than one in the sorted list,
 				//insert it there
-
+				sorted.add(loc);
+				inserted = true;
+			}
 			//If it was not inserted, stick it on the end.
-
-
+			loc++;
+		}
 		//End Loop for unsorted list
 
 		System.out.println(sorted);
